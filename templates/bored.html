@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Edudot</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+  <link rel="stylesheet" type="text/css" href="/static/assets/css/style.css">
+  <style>
+
+
+
+   h3{
+  color:white;
+  font-size: 60px;
+}
+h4{
+  color:white;
+}
+.icon-input-btn{
+        display: inline-block;
+        position: relative;
+    }
+    .icon-input-btn input[type="submit"]{
+        padding-left: 2em;
+    }
+    .icon-input-btn .glyphicon{
+        display: inline-block;
+        position: absolute;
+        left: 0.65em;
+        top: 30%;
+    }
+     .nav-menu a 
+    {
+      font-size:11px;
+    }
+
+
+
+  </style>
+</head>
+<body>
+   <header id="header" class="fixed-top ">
+    <div class="container-fluid">
+
+      <div class="row justify-content-center">
+        <div class="col-xl-10 d-flex align-items-center" style="margin-right: 97px;">
+          <img src="/static/assets/img/logo.png" style="width:65px">
+          <h1 class="logo mr-auto"><a href="/display_edudot">EDUDOT</a></h1>
+          
+
+          <nav class="nav-menu d-none d-lg-block">
+            <ul>
+              <li ><a href="/display_edudot">Home</a></li>
+              <li><a href="/display_edudot">About</a></li>
+              <li><a href="/display_edudot">Resources</a></li>
+              <li><a href="/text_summ">Summarizer</a></li>
+              <li><a href="/make_notes">Make Notes</a></li>
+              <li><a href="/view_saved_notes">Show Notes</a></li>
+              <li><a href="/display_edudot">AR Models</a></li>
+              <li class="active"><a href="/bored">Feeling Bored??</a></li>
+             
+              
+              <li><a href="#footer">Contact</a></li>
+
+            </ul>
+          </nav>
+          <a href="/logout" class="get-started-btn scrollto">Logout</a>
+
+
+          
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container-fluid" data-aos="fade-up">
+      <div class="row justify-content-center">
+        <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1
+d-flex flex-column justify-content-center">
+ <h3>Take A Break!!!!</h3>
+          <h4>Listen To Your Favourite Song</h4>
+
+            <form action="/play_video" method="POST">
+
+                <input type="text" class="form-control"  name="video" 
+placeholder="Search for Your Favourite song">
+                <div class="form-group">
+
+                    <br>
+                     <span class="icon-input-btn"><span class="glyphicon glyphicon-play"></span> <input type="submit" class="btn btn-warning btn-lg" value="Play"></span>
+                <a href="/stop_video "><button type="button" class="btn
+btn-danger"><i class="fa fa-stop"></i> Stop</button></a>
+              </div>
+              <div>
+
+              </div>
+              </form>
+
+
+        </div>
+        <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img"
+data-aos="zoom-in" data-aos-delay="150">
+
+           <img
+src="https://media.giphy.com/media/kf3EjrAsKp3P9bhYHG/giphy.gif">
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>EDUDOT</h3>
+            <p>
+                      
+              India <br><br>
+             
+              <strong>Email:</strong>edudot2k20@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links" style="margin-left:90px">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a
+href="#home">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a
+href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a
+href="#res">Resources</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#ar">AR
+Models</a></li>
+
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links" style="margin-left:190px">
+            <h4>Our Team</h4>
+            <p>"BUGSLAYERS"</p>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i>Charanpreet Singh
+Bhatia</li>
+              <li><i class="bx bx-chevron-right"></i>Gurleen Kaur Bhatia</li>
+
+            </ul>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="copyright-wrap d-md-flex py-4">
+        <div class="mr-md-auto text-center text-md-left">
+          <div class="copyright">
+            &copy; Copyright <strong><span>Edudot</span></strong>. All
+Rights Reserved
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  </body>
+  <script src="/static/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="/static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="/static/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="/static/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="/static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/static/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="/static/assets/vendor/aos/aos.js"></script>
+  <script src="/static/assets/js/main.js"></script>
+  </html>

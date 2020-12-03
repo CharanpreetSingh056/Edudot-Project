@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Edudot Summarizer </title>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+  <link rel="stylesheet" type="text/css" href="/static/assets/css/style.css">
+  <style>
+
+
+
+    th
+    {
+      font-size:25px;
+
+    }
+    td
+    {
+      color:white;
+
+
+    }
+     .nav-menu a 
+    {
+      font-size:11px;
+    }
+
+
+  </style>
+</head>
+<body>
+    <header id="header" class="fixed-top ">
+    <div class="container-fluid">
+
+      <div class="row justify-content-center">
+        <div class="col-xl-10 d-flex align-items-center" style="margin-right: 97px;">
+          <img src="/static/assets/img/logo.png" style="width:65px">
+          <h1 class="logo mr-auto"><a href="/display_edudot">EDUDOT</a></h1>
+          
+
+          <nav class="nav-menu d-none d-lg-block">
+            <ul>
+              <li ><a href="/display_edudot">Home</a></li>
+              <li><a href="/display_edudot">About</a></li>
+              <li><a href="/display_edudot">Resources</a></li>
+              <li class="active"><a href="/text_summ">Summarizer</a></li>
+              <li ><a href="/make_notes">Make Notes</a></li>
+              <li ><a href="/view_saved_notes">Show Notes</a></li>
+              <li><a href="/display_edudot">AR Models</a></li>
+              <li ><a href="/bored">Feeling Bored??</a></li>
+             
+              
+              <li><a href="#footer">Contact</a></li>
+
+            </ul>
+          </nav>
+          <a href="/logout" class="get-started-btn scrollto">Logout</a>
+
+
+          
+        </div>
+      </div>
+
+    </div>
+  </header>
+    <section id="hero" class="d-flex align-items-center"
+style="height:100%">
+        <div class="container-fluid" data-aos="fade-up" >
+    <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr class="row">
+              <th class="col-sm-6">Orginal Text</th>
+              <th class="col-sm-6">Summary</th>
+
+
+
+
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr class="row">
+
+              <td style="color:black" class="col-sm-6"><div><br>{{org_text_url}}</div>
+                <div>{{org_text_text}}</div></td>
+              <td class="col-sm-6"><div><br>{{summary_url}}</div>
+
+
+<form action= '{{ url_for("save_summary", summary=summary_url, param="string with spaces") }}' method="post">
+
+                <div>{{summary_text}}</div><form action= {{ url_for("save_summary", summary=summary_url , param="string with spaces") }}  method="post">
+
+                    {{error}}
+<hr>
+
+                  <div class="form-group">
+                      <h2 style="color:#ffdb58;text-align: center;">Wish To Save As Notes</h2>
+                      <input type="text" class="form-control" name="title" placeholder="Enter Title To save">
+      
+                    </div>
+                    <div class="form-group">
+                           
+                      <input type="submit" class="btn btn-sm btn-warning" value="Save" name="text_url">
+                    
+                  </div>
+      
+      
+              </form></td>
+
+
+            </tr>
+
+          </tbody>
+        </table>
+        </div>
+        
+        </div>
+        </section>
+        <footer id="footer">
+
+            <div class="footer-top">
+              <div class="container">
+                <div class="row">
+
+                  <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>EDUDOT</h3>
+                    <p>
+                      
+                      India <br><br>
+                     
+                      <strong>Email:</strong>edudot2k20@gmail.com<br>
+                    </p>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6 footer-links"
+style="margin-left:90px">
+                    <h4>Useful Links</h4>
+                    <ul>
+                      <li><i class="bx bx-chevron-right"></i> <a
+href="#home">Home</a></li>
+                      <li><i class="bx bx-chevron-right"></i> <a
+href="#about">About us</a></li>
+                      <li><i class="bx bx-chevron-right"></i> <a
+href="#res">Resources</a></li>
+                      <li><i class="bx bx-chevron-right"></i> <a
+href="#ar">AR Models</a></li>
+
+                    </ul>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6 footer-links"
+style="margin-left:190px">
+                    <h4>Our Team</h4>
+                    <p>"BUGSLAYERS"</p>
+                    <ul>
+                      <li><i class="bx
+bx-chevron-right"></i>Charanpreet Singh Bhatia</li>
+                      <li><i class="bx bx-chevron-right"></i>Gurleen
+Kaur Bhatia</li>
+
+                    </ul>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+
+              <div class="copyright-wrap d-md-flex py-4">
+                <div class="mr-md-auto text-center text-md-left">
+                  <div class="copyright">
+                    &copy; Copyright
+<strong><span>Edudot</span></strong>. All Rights Reserved
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+          </footer>
+
+</body>
+<script src="/static/assets/js/main.js"></script>
+</html>
