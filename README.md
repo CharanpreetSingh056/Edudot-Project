@@ -3,6 +3,7 @@
 Heroku : https://edudot-check.herokuapp.com/
 
 Devfolio Submission : https://devfolio.co/submissions/edudot
+
 This repository contains a webapp named Edudot built during an online hackathon ( Eduthon ).
 
 # Following are the features of Edudot:
