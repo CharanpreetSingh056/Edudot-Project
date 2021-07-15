@@ -1,7 +1,7 @@
 # Edudot : Web-app built with a motive to make learning easy.
 
-https://edudot-check.herokuapp.com/
-
+Heroku : https://edudot-check.herokuapp.com/
+Devfolio Submission : https://devfolio.co/submissions/edudot
 This repository contains a webapp named Edudot built during an online hackathon ( Eduthon ).
 
 # Following are the features of Edudot:
